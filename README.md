@@ -1,10 +1,3 @@
-# my_AVR-Template
+# Reflow-Ofen
 
-##### Template für AVR-MCUs unter VScode/PlatformIO (ARDUINO-C++/Native-C).
-
-1. Zunächst ein normales ARDUINO-Projekt unter Platform-IO mit gewünschtem AVR-Zielprozessor anlegen.
-2. Dann die platformio.ini mit der gleichnamigen Datei aus \Template ersetzen.
-3. Je nach verwendete Platform die darin enthaltenen Quelltextbereiche dis-/enablen und MCU anpassen.
-4. Bei nativer C-Programmiereung die erzeugte main.cpp löschen und durch main.c aus \Template ersetzen.
-5. Bei ARDUINO-Framework die mai.cpp mit den Inhalten aus der \Template\main.cpp anpassen oder auch ganz ersetzen.
-
+Ich möchte hier einen Reflow-Ofen vorstellen, mit dem man SMD-Bauelemente sauber und professionell auf Platinen auflöten kann. Wenn man im Internet recherchiert, findet man jede Menge Stoff dazu. Mich hat die Lösung unter https://www.instructables.com/DIY-REFLOW-OVEN sofort angesprochen. Die Ein-/Ausgabe erfolgt hier mit einem HMI-Display von NEXTION. Der großer Vorteil ist, dass Soll- und Ist-Lötprofil dabei grafisch und in Echtzeit dargestellt werden. Die Regelung übernimmt ein „Bluepill“, also ein kleines Entwicklungsboard auf Basis eines STM32F103xx. Zur Temperaturmessung wird ein Thermoelemt Nickel-Chrom-Nickel (K-Typ) verwendet, dass über einen MAX6675 an den Controller angebunden wird. Die Heizungsansteuerung übernimmt ein SSR. Wird das alles in geeigneter Weise in einen Pizzaofen mit Umluftfunktion und mindestens 1200W-Gesamtheizleistung eingebaut, erhält man einen super Lötofen. Obwohl das Konzept in sich schlüssig ist, wurden unter https://github.com/polihedron/DIY-Reflow-Oven weiter signifikante Verbesserungen vorgenommen. Die Beendigung des Lötprozesses wird durch einen Buzzer signalisiert und über das HMI-Display können 4 benutzerspezifische Lötprofile ausgewählt werden. Bei diesem Konzept setzt meine Lösungsvariante an.
